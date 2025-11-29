@@ -246,6 +246,127 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          {/* Footer */}
+          <div style={{ 
+            padding: '24px', 
+            background: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: '16px',
+            marginTop: '24px',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            textAlign: 'center',
+            opacity: 0,
+            animation: 'slideUp 0.6s ease-out 1s forwards'
+          }}>
+            <p style={{ 
+              fontSize: '14px', 
+              color: '#4a5568', 
+              marginBottom: '16px',
+              fontWeight: '500'
+            }}>
+              Designed and Developed by <span style={{ 
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                fontWeight: '700'
+              }}>Sabarivasan</span>
+            </p>
+            <div style={{ 
+              display: 'flex', 
+              gap: '12px', 
+              justifyContent: 'center',
+              flexWrap: 'wrap'
+            }}>
+              <a 
+                href="https://github.com/Sabari-Vasan-SM/Harvee-Task-UMS"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: '8px 20px',
+                  borderRadius: '8px',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  color: '#2d3748',
+                  textDecoration: 'none',
+                  fontSize: '13px',
+                  fontWeight: '600',
+                  transition: 'all 0.3s ease',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+                  e.target.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = 'rgba(255, 255, 255, 0.1)';
+                  e.target.style.transform = 'translateY(0)';
+                }}
+              >
+                <span>🐙</span> GitHub
+              </a>
+              <a 
+                href="https://portfolio.vasan.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: '8px 20px',
+                  borderRadius: '8px',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  color: '#2d3748',
+                  textDecoration: 'none',
+                  fontSize: '13px',
+                  fontWeight: '600',
+                  transition: 'all 0.3s ease',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+                  e.target.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = 'rgba(255, 255, 255, 0.1)';
+                  e.target.style.transform = 'translateY(0)';
+                }}
+              >
+                <span>💼</span> Portfolio
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/sabarivasan-s-m-b10229255/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: '8px 20px',
+                  borderRadius: '8px',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  color: '#2d3748',
+                  textDecoration: 'none',
+                  fontSize: '13px',
+                  fontWeight: '600',
+                  transition: 'all 0.3s ease',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+                  e.target.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = 'rgba(255, 255, 255, 0.1)';
+                  e.target.style.transform = 'translateY(0)';
+                }}
+              >
+                <span>💼</span> LinkedIn
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
