@@ -40,7 +40,9 @@ const UserLogin = () => {
         navigate('/dashboard');
       }
     } catch (err) {
-      setError(err.response?.data?.message || 'Login failed');
+      const errorMsg = err.response?.data?.message || 'Invalid credentials';
+      setError(errorMsg);
+      alert(errorMsg);
       setLoading(false);
     }
   };

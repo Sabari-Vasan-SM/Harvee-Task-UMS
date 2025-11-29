@@ -154,10 +154,14 @@ const UserProfile = () => {
             </div>
           )}
 
-          {currentImage && (
+          {currentImage ? (
             <div style={{ textAlign: 'center', marginBottom: '24px' }}>
               <img
-                src={`http://localhost:5000${currentImage}`}
+                src={
+                  currentImage.startsWith('http')
+                    ? currentImage
+                    : `${(import.meta.env.VITE_API_BASE_URL?.replace(/\/api$/, '') || 'http://localhost:5000')}${currentImage}`
+                }
                 alt="Current profile"
                 style={{ 
                   width: '120px', 
@@ -168,7 +172,7 @@ const UserProfile = () => {
                 }}
               />
             </div>
-          )}
+          ) : null}
 
           <form onSubmit={handleSubmit}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
