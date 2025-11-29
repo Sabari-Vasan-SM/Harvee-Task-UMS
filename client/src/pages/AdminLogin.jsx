@@ -30,7 +30,9 @@ const AdminLogin = () => {
 
       // Check if user is admin
       if (user.role !== 'admin') {
-        setError('Admin access required');
+        const errorMsg = 'Admin access required';
+        setError(errorMsg);
+        alert(errorMsg);
         setLoading(false);
         return;
       }
@@ -43,7 +45,9 @@ const AdminLogin = () => {
       // Redirect to users list
       navigate('/admin/users');
     } catch (err) {
-      setError(err.response?.data?.message || 'Login failed');
+      const errorMsg = err.response?.data?.message || 'Invalid credentials';
+      setError(errorMsg);
+      alert(errorMsg);
       setLoading(false);
     }
   };
