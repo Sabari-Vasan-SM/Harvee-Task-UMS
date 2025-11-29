@@ -19,7 +19,7 @@ const UserDashboard = () => {
           <h1>User Dashboard</h1>
           <div className="flex">
             <button onClick={() => navigate('/profile')} className="btn btn-primary">
-              My Profile
+              Edit Profile
             </button>
             <button onClick={handleLogout} className="btn btn-secondary">
               Logout
@@ -105,30 +105,6 @@ const UserDashboard = () => {
               <p style={{ fontSize: '16px', fontWeight: '500', textTransform: 'capitalize' }}>
                 {user.role}
               </p>
-            </div>
-          </div>
-
-          <div style={{ 
-            marginTop: '32px', 
-            padding: '24px', 
-            backgroundColor: '#e7f3ff', 
-            borderRadius: '8px',
-            borderLeft: '4px solid #007bff'
-          }}>
-            <h3 style={{ fontSize: '18px', marginBottom: '12px' }}>📌 Quick Actions</h3>
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <button 
-                onClick={() => navigate('/profile')}
-                className="btn btn-primary"
-              >
-                Edit Profile
-              </button>
-              <button 
-                onClick={() => navigate('/')}
-                className="btn btn-secondary"
-              >
-                Back to Home
-              </button>
             </div>
           </div>
         </div>
