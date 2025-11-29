@@ -31,9 +31,13 @@ const UserDashboard = () => {
       <div className="container">
         <div className="card">
           <div style={{ textAlign: 'center', padding: '40px' }}>
-            {user.profile_image && (
+            {user.profile_image ? (
               <img
-                src={`http://localhost:5000${user.profile_image}`}
+                src={
+                  user.profile_image.startsWith('http')
+                    ? user.profile_image
+                    : `${(import.meta.env.VITE_API_BASE_URL?.replace(/\/api$/, '') || 'http://localhost:5000')}${user.profile_image}`
+                }
                 alt={user.name}
                 style={{ 
                   width: '120px', 
@@ -44,6 +48,15 @@ const UserDashboard = () => {
                   border: '4px solid #007bff'
                 }}
               />
+            ) : (
+              <div style={{
+                width: '120px', height: '120px', borderRadius: '50%',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                color: 'white', fontSize: '48px', marginBottom: '24px', border: '4px solid #007bff'
+              }}>
+                {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
+              </div>
             )}
             <h2 style={{ fontSize: '32px', marginBottom: '8px' }}>
               Welcome, {user.name}! 👋
